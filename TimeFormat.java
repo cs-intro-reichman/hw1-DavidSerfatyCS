@@ -1,17 +1,45 @@
 // Represents the hh:mm time format using an AM/PM format. 
 public class TimeFormat {
 	public static void main(String[] args) {
-		// In Java, the command-line arguments args[0], args[1], ... are represented
-		// each by a string. In this program, the single "hh:mm" input is represented
-		// by the single command-line string argument args[0]. 
-		//   
-		// The following statement handles the hours part of the input.
-		// It concatenates the empty string "" with the leftmost hour-digit. 
-		// It then concatenates the resulting string with the rightmost hour-digit,
-		// and then uses parseInt to cast the resulting string as an int.
-		int hours = Integer.parseInt("" + args[0].charAt(0) + args[0].charAt(1));
-		// Does the same with the minutes part of the input.
-		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
-        // Replace this comment with the rest of your code
+	int maxHour = 23;
+        int minHour = 0;
+
+        int randomHourInput =  (int) (Math.random() *
+                             ((maxHour - minHour) + 1));
+
+        if (randomHourInput < 10)  {
+            String randomHourString = "" + randomHourInput;
+            String addZeroHour = "0" + randomHourString; 
+            System.out.print(addZeroHour + ":"); 
+
+        } else { System.out.print(randomHourInput + ":");
+        }
+     
+        int randomMinuteInput = randomMinuteGenerator();
+        if ( randomMinuteInput < 10)  {
+            String randomMinuteString = "" + randomMinuteInput;
+            String addZeroMinute = "0" + randomMinuteString; 
+            System.out.print(addZeroMinute); 
+
+        } else { System.out.print(randomMinuteInput); 
+        
+        	System.out.println("");
+
+        }
+        if (randomHourInput > 12) {
+            System.out.println((randomHourInput - 12) + 
+            ":" + randomMinuteInput);
+
+        } else { System.out.println(randomHourInput + 
+        ":" + randomMinuteInput); 
+        }
+}
+public static int randomMinuteGenerator () {
+        int maxMinute = 59;
+        int minMinute = 0;
+        
+        int randomMinuteInput =  (int) (Math.random() * 
+                            ((maxMinute - minMinute) + 1));
+        return randomMinuteInput;	
 	}
 }
