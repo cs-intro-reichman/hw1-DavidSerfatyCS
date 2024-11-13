@@ -1,45 +1,36 @@
 // Represents the hh:mm time format using an AM/PM format. 
 public class TimeFormat {
 	public static void main(String[] args) {
-	int maxHour = 23;
-        int minHour = 0;
+	
 
-        int randomHourInput =  (int) (Math.random() *
-                             ((maxHour - minHour) + 1));
+        int hourInput = Integer.parseInt(args[0]);
+        int minuteInput = Integer.parseInt(args[1]);
 
-        if (randomHourInput < 10)  {
-            String randomHourString = "" + randomHourInput;
-            String addZeroHour = "0" + randomHourString; 
+        if (hourInput < 10)  {
+            String hourString = "" + hourInput;
+            String addZeroHour = "0" + hourString; 
             System.out.print(addZeroHour + ":"); 
 
-        } else { System.out.print(randomHourInput + ":");
+        } else { System.out.print(hourInput + ":");
         }
      
-        int randomMinuteInput = randomMinuteGenerator();
-        if ( randomMinuteInput < 10)  {
-            String randomMinuteString = "" + randomMinuteInput;
-            String addZeroMinute = "0" + randomMinuteString; 
+        if ( minuteInput < 10)  {
+            String minuteString = "" + minuteInput;
+            String addZeroMinute = "0" + minuteString; 
             System.out.print(addZeroMinute); 
 
-        } else { System.out.print(randomMinuteInput); 
+        } else { System.out.print(minuteInput); 
         
         	System.out.println("");
 
         }
-        if (randomHourInput > 12) {
-            System.out.println((randomHourInput - 12) + 
-            ":" + randomMinuteInput);
+        if (hourInput > 12) {
+            System.out.println((hourInput - 12) + 
+            ":" + minuteInput);
 
-        } else { System.out.println(randomHourInput + 
-        ":" + randomMinuteInput); 
+        } else { System.out.println(hourInput + 
+        ":" + minuteInput); 
         }
-}
-public static int randomMinuteGenerator () {
-        int maxMinute = 59;
-        int minMinute = 0;
-        
-        int randomMinuteInput =  (int) (Math.random() * 
-                            ((maxMinute - minMinute) + 1));
-        return randomMinuteInput;	
-	}
+
+    }
 }

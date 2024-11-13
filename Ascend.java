@@ -4,12 +4,13 @@ import java.util.Arrays;
 public class Ascend {
 	public static void main(String[] args) {
 		
-	int nOfIntegers = 3;
+	    int nOfIntegers = 3;
     	int[] ascending = new int[nOfIntegers];
+        int lim = Integer.parseInt(args[0]);
 
     for (int i = 0; i < nOfIntegers; i++) {
 
-        int max = 100;
+        int max = lim;
         int min = 0;
         int randomThree =  (int) (Math.random() * ((max - min) + 1));
         ascending[i] = randomThree;

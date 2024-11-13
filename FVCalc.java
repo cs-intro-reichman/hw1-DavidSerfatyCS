@@ -2,13 +2,16 @@ import java.text.NumberFormat;
 
 public class FVCalc {
 	public static void main(String[] args){
-	int currentValue  = (Math.abs(25000));
-    	double rate = 12;
-    	int nOfYears = 5; 
+
+	int currentValue = Integer.parseInt(args[0]);	
+	currentValue  = (Math.abs(currentValue));
+	
+	int rate = Integer.parseInt(args[1]);
+    int nOfYears = Integer.parseInt(args[2]); 
 
     System.out.println(
     		currentValue + " " + 
-	    	(int) rate  + " " +
+	    	 rate  + " " +
     		nOfYears);
 
     double futureValue = currentValue * 
