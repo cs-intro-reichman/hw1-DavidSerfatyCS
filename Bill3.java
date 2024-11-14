@@ -12,11 +12,11 @@ public class Bill3 {
 
     System.out.println( 
         "Dear " +
-        name1   + ", "     + 
+        name3   + ", "     + 
         name2   + ", and " + 
-        name3   + ": pay " +
+        name1   + ": pay " +
         bill3   + 
-        "Shekels each." );
+        " Shekels each." );
 
 
     }
