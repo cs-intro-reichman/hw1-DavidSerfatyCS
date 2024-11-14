@@ -11,14 +11,14 @@ public class FVCalc {
 
     System.out.println(
     		currentValue + " " + 
-	    	 rate  + " " +
+	    	 rate + "%" + " " +
     		nOfYears);
 
     double futureValue = currentValue * 
                         (Math.pow((1 + rate/100), nOfYears));
     
     String annualRate = 
-	    NumberFormat.getPercentInstance().format(rate/100); 
+	    (rate/100 + "%"); 
     String currentValue$ = 
 	    NumberFormat.getCurrencyInstance().format(currentValue);
     String futureValue$ = 
