@@ -14,7 +14,7 @@ public class Bill3 {
         name3  + " " +
         value);
 
-    double bill3 = (value/nOfDiners);
+    double bill3 = Math.ceil(value/nOfDiners);
 
     System.out.println(
     "Each one should pay: " +
