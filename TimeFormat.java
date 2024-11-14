@@ -3,17 +3,21 @@ public class TimeFormat {
 	public static void main(String[] args) {
 	
 
-        int hourInput = Integer.parseInt(args[0]);
-        int minuteInput = Integer.parseInt(args[1]);
+        String hourInput = (args[0]);
+        String minuteInput = (args[1]);
 
-        if (hourInput < 10)  { 
+        int hourInputInt = Integer.parseInt(hourInput);
+        int minuteInputInt = Integer.parseInt(minuteInput);
+
+
+        if (hourInputInt < 10)  { 
             String addZeroHour = "0" + hourInput; 
             System.out.print(addZeroHour + ":"); 
 
         } else { System.out.print(hourInput + ":");
         }
      
-        if ( minuteInput < 10)  {
+        if ( minuteInputInt < 10)  {
             String addZeroMinute = "0" + minuteInput;
             System.out.print(addZeroMinute); 
 
@@ -22,8 +26,8 @@ public class TimeFormat {
         	System.out.println();
 
         }
-        if (hourInput > 12) {
-            System.out.println((hourInput - 12) + 
+        if (hourInputInt > 12) {
+            System.out.println((hourInputInt - 12) + 
             ":" + minuteInput);
 
         } else { System.out.println(hourInput + 
