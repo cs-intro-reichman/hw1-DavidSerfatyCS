@@ -15,9 +15,9 @@ public class TimeFormat {
                 i++ ;
 
              }
-            
-        while ( i < 5) {
-                char n = timeFormat.charAt(i+3);
+            i = 3;
+        while ( i < 4) {
+                char n = timeFormat.charAt(i);
                 minutes = minutes + n; 
 
                 i++ ;
