@@ -27,9 +27,9 @@ public class TimeFormat {
                
 
         if (hoursInt == 0) {
-                            hoursInt =+ 12;
+                            
                             System.out.println(
-                            hoursInt + ":" + minutes + " AM");
+                            "0" + hoursInt + ":" + minutes + " AM");
 
 
        } else if (hoursInt > 12) {
