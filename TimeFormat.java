@@ -2,37 +2,52 @@
 public class TimeFormat {
 	public static void main(String[] args) {
 	
+        String timeFormat  = (args[0]);
 
-        String hourInput = (args[0]);
-        String minuteInput = (args[1]);
-
-        int hourInputInt = Integer.parseInt(hourInput);
-        int minuteInputInt = Integer.parseInt(minuteInput);
-
-
-        if (hourInputInt < 10)  { 
-            String addZeroHour = "0" + hourInput; 
-            System.out.print(addZeroHour + ":"); 
-
-        } else { System.out.print(hourInput + ":");
-        }
-     
-        if ( minuteInputInt < 10)  {
-            String addZeroMinute = "0" + minuteInput;
-            System.out.print(addZeroMinute); 
-
-        } else { System.out.print(minuteInput); 
+                int i = 0;
+                String hours   = ""; 
+                String minutes = "";
         
-        	System.out.println();
+        while ( i < 2) {
+                char n = timeFormat.charAt(i);
+                hours = hours + n; 
+
+                i = i ++;
+
+             }
+            
+        while ( i < 2) {
+                char n = timeFormat.charAt(i+3);
+                minutes = minutes + n; 
+
+                i = i ++;
+             }
+
+                int hoursInt = Integer.parseInt(hours);
+                int minutesInt = Integer.parseInt(minutes);
+
+        if (hoursInt == 0) {
+                            hoursInt =+ 12;
+                            System.out.println(
+                            hoursInt + ":" + minutesInt + " AM");
+
+
+       } else if (hoursInt > 12) {
+                            System.out.println(
+                            (hoursInt - 12) + ":" + 
+                            minutesInt + " PM");
 
         }
-        if (hourInputInt > 12) {
-            System.out.println((hourInputInt - 12) + 
-            ":" + minuteInput);
-
-        } else { System.out.println(hourInput + 
-        ":" + minuteInput); 
+         else if (hoursInt == 12) {
+                            System.out.println(
+                            hoursInt + ":" +
+                            minutesInt + " PM"); 
         }
+        else { 
+                            System.out.println(
+                            hoursInt + ":" +
+                            minutesInt + " AM");
 
-    }
+        }
+         }
 }
