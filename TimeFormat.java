@@ -12,7 +12,7 @@ public class TimeFormat {
                 char n = timeFormat.charAt(i);
                 hours = hours + n; 
 
-                i = i ++;
+                i = i++ ;
 
              }
             
@@ -20,7 +20,7 @@ public class TimeFormat {
                 char n = timeFormat.charAt(i+3);
                 minutes = minutes + n; 
 
-                i = i ++;
+                i = i++ ;
              }
 
                 int hoursInt = Integer.parseInt(hours);

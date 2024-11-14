@@ -12,14 +12,14 @@ public class FVCalc {
                         (Math.pow((1 + (rate/100)), nOfYears));
     
     String annualRate = 
-						(rate/100 + "%"); 
+						(rate + "%"); 
     String currentValue$ = 
 	    				"$" + currentValue;
     String futureValue$ = 
-						"$" + futureValue;
+						"$" + (int) futureValue;
 						
 	System.out.println(
-            		"After " + nOfYears + " years, " +
+            		"After " + nOfYears + " years, a " +
             		currentValue$ + " saved at " + 
            		 annualRate + " will yield " + 
             		 futureValue$);	
