@@ -6,7 +6,7 @@ public class FVCalc {
 	int currentValue = Integer.parseInt(args[0]);	
 	currentValue  = (Math.abs(currentValue));
 	
-	int rate = Integer.parseInt(args[1]);
+	double rate = Double.parseDouble(args[1]);
     int nOfYears = Integer.parseInt(args[2]); 
 
     System.out.println(
